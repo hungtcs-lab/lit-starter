@@ -1,0 +1,49 @@
+{
+  "name": "lit-starter",
+  "version": "0.0.0",
+  "description": "",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "test": "web-test-runner",
+    "test:coverage": "web-test-runner --coverage",
+    "lint": "eslint \"lib/**/*.ts\"",
+    "build": "rm -rf dist && tsc --project tsconfig.lib.json",
+    "start:dev": "web-dev-server"
+  },
+  "keywords": [
+    "lit",
+    "lit-element",
+    "starter"
+  ],
+  "author": "hungtcs <hungtcs@outlook.com> (https://github.com/hungtcs-lab)",
+  "license": "UNLICENSE",
+  "devDependencies": {
+    "@open-wc/testing": "^3.0.0-next.5",
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
+    "@web/dev-server": "^0.1.32",
+    "@web/dev-server-esbuild": "^0.3.1",
+    "@web/test-runner": "^0.13.31",
+    "eslint": "^8.19.0",
+    "husky": "^8.0.1",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "lit": "^2.2.7"
+  },
+  "peerDependencies": {
+    "tslib": "^2.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hungtcs-lab/lit-starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hungtcs-lab/lit-starter/issues"
+  },
+  "homepage": "https://github.com/hungtcs-lab/lit-starter#readme"
+}
