@@ -1,5 +1,8 @@
 {
   "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "useDefineForClassFields": false,
+  },
   "include": [
     "lib/**/*.ts",
     "src/**/*.ts"
