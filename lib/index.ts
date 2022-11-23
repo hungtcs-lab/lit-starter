@@ -1,2 +1,1 @@
-export * from './hello.element';
-export * from './some.element';
+export * from './button/index.js'

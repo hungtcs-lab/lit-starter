@@ -1,0 +1,61 @@
+import './button.element';
+import { html } from 'lit-html';
+import { action } from '@storybook/addon-actions';
+import { Canvas, Meta, Story, ArgsTable, Description } from '@storybook/addon-docs';
+
+export const Template = (args) => {
+  return html`<le-button @click=${ action('click') }>${ args.text }</le-button>`;
+}
+
+<Meta
+  title="Components/Button"
+  argTypes={{
+    text: {
+      name: 'Text',
+      control: 'text',
+      description: 'text content of button',
+      defaultValue: 'Click',
+      table: {
+        type: { summary: 'string' },
+        defaultValue: {
+          summary: 'Click'
+        }
+      },
+    },
+  }}
+  parameters={{
+    docs: {
+      description: {
+        component: 'Some component _markdown_',
+      },
+    }
+  }}
+  >
+</Meta>
+
+<Canvas>
+  <Story name="ElevatedButton">{ Template.bind({}) }</Story>
+  <Story name="FilledButton">{ Template.bind({}) }</Story>
+</Canvas>
+
+# Button
+
+<Description></Description>
+
+## ElevatedButton
+
+<Story id="components-button--elevated-button"></Story>
+
+## FilledButton
+
+<Story id="components-button--filled-button"></Story>
+
+# API
+
+## ElevatedButton
+
+<ArgsTable story="ElevatedButton"></ArgsTable>
+
+## FilledButton
+
+<ArgsTable story="FilledButton"></ArgsTable>

@@ -1,13 +1,16 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    // "rootDir": "src"
+    "rootDir": "lib"
   },
   "include": [
-    "lib/**/*.ts"
+    "lib/**/*.ts",
+    "lib/types.d.ts",
   ],
   "exclude": [
     "node_modules",
-    "lib/**/*.spec.ts"
+    "lib/**/*.spec.ts",
+    "lib/**/*.docs.ts",
+    "lib/**/*.stories.ts"
   ]
 }
